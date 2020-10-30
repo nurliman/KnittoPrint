@@ -1,8 +1,8 @@
 const escpos = require("escpos");
+escpos.Network = require("escpos-network");
+
 const JsBarcode = require('jsbarcode');
 const { createCanvas } = require("canvas");
-
-escpos.Network = require("escpos-network");
 
 const device = new escpos.Network("192.168.21.99");
 const options = { encoding: "GB18030" /* default */ };
