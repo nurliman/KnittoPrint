@@ -8,7 +8,11 @@ services:
       dockerfile: ./Dockerfile
     environment:
       NODE_ENV: development
+      PORT: "3053"
+    network_mode: "host"
+    expose: 
+      - "3053"
     ports:
-      - 3000:3000
+      - 3053:3053
       - 9229:9229
     command: ["node", "--inspect=0.0.0.0:9229", "./bin/www"]
