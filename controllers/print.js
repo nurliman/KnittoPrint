@@ -28,10 +28,9 @@ exports.testPrints = (req, res, next) => {
 
   JsBarcode(canvas, code, { width: 3.2, height: 78, displayValue: false });
 
-
   escpos.Image.load(canvas.toDataURL('image/png', 1), (image) => {
     device.open(() => {
-      
+
       printer
         .font("A")
         .align("CT")
