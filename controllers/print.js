@@ -43,6 +43,9 @@ exports.testPrints = (req, res, next) => {
         .text('NPWP : 92.546.211.1-423.000')
         //
         .feed()
+        .text('www.knitto.co.id')
+        //
+        .feed()
         .drawLine()
         .feed()
         //
